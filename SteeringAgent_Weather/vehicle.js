@@ -90,7 +90,7 @@ Vehicle.prototype.separate = function(fishies)
 
     }
     return steer;
-};
+}
 
 Vehicle.prototype.seek = function(target){
     var desiredPos = p5.Vector.sub(target, this.pos);
@@ -100,7 +100,7 @@ Vehicle.prototype.seek = function(target){
     var steer = p5.Vector.sub(desiredPos, this.vel);
     steer.limit(this.maxforce);
     return steer;
-};
+}
 
 Vehicle.prototype.align = function(fishies){
     var neighborDist = 50;
@@ -125,7 +125,7 @@ Vehicle.prototype.align = function(fishies){
     }
     return steer;
 
-};
+}
 
 Vehicle.prototype.cohesion = function(fishies){
     var neighborDist = 50;
@@ -147,7 +147,7 @@ Vehicle.prototype.cohesion = function(fishies){
         return createVector(0,0);
     }
 
-};
+}
 
 
 Vehicle.prototype.display = function(){
